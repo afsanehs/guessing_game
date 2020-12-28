@@ -6,8 +6,6 @@
 
 import random
 
-
-
 def start_game(best_attempt = 1000000):
     attempt = 0
     guess = int()
@@ -50,29 +48,24 @@ def start_game(best_attempt = 1000000):
 
     # 4. Once the guess is correct, stop looping, inform the user they "Got it"
     # and show how many attempts it took them to get the correct number.
-    print(best_attempt)
-
-    print(attempt < best_attempt)
 
     if attempt < best_attempt:
         best_attempt = attempt
     
-    print(best_attempt)
-
     print('Got it! It took you ' + str(attempt) + ' attempt(s)')
             
     # 5. Let the player know the game is ending, or something that indicates the game is over.
     print("Game is over")
+
     # ( You can add more features/enhancements if you'd like to. )
     try_again(best_attempt)
-
 
 def try_again(best_attempt):
     again = raw_input('Do you want to play again? ')
     if again.upper() == 'YES':
         start_game(best_attempt)
     if again.upper() == 'NO':
-        print('Thanks for playing')
+        print('Thanks for playing') 
     else:
         print('Wrong input! Try again.')
         try_again(best_attempt)
