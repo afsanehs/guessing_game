@@ -27,7 +27,7 @@ def start_game(best_attempt = 1000000):
     while True:
         attempt = attempt + 1
         try:
-            guess = int(raw_input("give a number "))
+            guess = int(input("give a number "))
         except ValueError:
             print("Try again, it's a number: ")
             continue
@@ -61,7 +61,7 @@ def start_game(best_attempt = 1000000):
     try_again(best_attempt)
 
 def try_again(best_attempt):
-    again = raw_input('Do you want to play again? ')
+    again = input('Do you want to play again? ')
     if again.upper() == 'YES':
         start_game(best_attempt)
     if again.upper() == 'NO':
